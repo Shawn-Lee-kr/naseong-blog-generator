@@ -13,72 +13,75 @@
       --radius:8px; --radius-lg:12px; --shadow:0 2px 8px rgba(0,0,0,0.08);
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Apple SD Gothic Neo','Noto Sans KR',-apple-system,sans-serif;background:var(--gray-bg);color:var(--text);min-height:100vh;padding-bottom:60px}
+    body{font-family:'Apple SD Gothic Neo','Noto Sans KR',-apple-system,sans-serif;background:var(--gray-bg);color:var(--text);min-height:100vh;padding-bottom:60px;font-size:15px}
 
     /* 헤더 */
     .hdr{background:var(--yellow);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
-    .hdr-in{display:flex;align-items:stretch;max-width:620px;margin:0 auto}
-    .hdr-logo{background:var(--blue);padding:10px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-width:70px}
-    .hdr-logo span{color:var(--yellow);font-size:11px;font-weight:900;line-height:1.2;text-align:center}
-    .hdr-info{padding:10px 14px;display:flex;flex-direction:column;justify-content:center}
-    .hdr-title{font-size:15px;font-weight:900;color:var(--blue)}
-    .hdr-sub{font-size:11px;color:var(--blue);opacity:.7;margin-top:1px}
-    .hdr-badge{margin-left:auto;align-self:center;margin-right:14px;background:var(--blue);color:var(--yellow);font-size:11px;font-weight:900;padding:4px 10px;border-radius:20px}
+    .hdr-in{display:flex;align-items:stretch;max-width:960px;margin:0 auto}
+    .hdr-logo{background:var(--blue);padding:14px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:88px}
+    .hdr-logo span{color:var(--yellow);font-size:14px;font-weight:900;line-height:1.2;text-align:center}
+    .hdr-info{padding:14px 20px;display:flex;flex-direction:column;justify-content:center}
+    .hdr-title{font-size:20px;font-weight:900;color:var(--blue)}
+    .hdr-sub{font-size:13px;color:var(--blue);opacity:.7;margin-top:2px}
+    .hdr-badge{margin-left:auto;align-self:center;margin-right:20px;background:var(--blue);color:var(--yellow);font-size:13px;font-weight:900;padding:6px 14px;border-radius:20px}
 
     /* 스텝바 */
-    .stpbar{background:var(--blue);padding:8px 14px;max-width:620px;margin:0 auto;display:flex;align-items:center}
-    .stp{display:flex;align-items:center;gap:5px;flex:1}
-    .stp-n{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;background:rgba(255,255,255,.15);color:rgba(255,255,255,.4);border:1.5px solid rgba(255,255,255,.2);transition:all .25s}
-    .stp.active .stp-n{background:var(--yellow);color:var(--blue);border-color:var(--yellow)}
+    .stpbar{background:var(--blue);padding:18px 20px;max-width:960px;margin:0 auto;display:flex;align-items:flex-start;gap:4px}
+    .stp{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;text-align:center}
+    .stp-n{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;flex-shrink:0;background:rgba(255,255,255,.15);color:rgba(255,255,255,.5);border:2px solid rgba(255,255,255,.25);transition:all .25s}
+    .stp.active .stp-n{background:var(--yellow);color:var(--blue);border-color:var(--yellow);box-shadow:0 0 0 4px rgba(255,214,0,.25)}
     .stp.done   .stp-n{background:rgba(255,255,255,.9);color:var(--blue);border-color:#fff}
-    .stp-l{font-size:10px;color:rgba(255,255,255,.4)}
-    .stp.active .stp-l{color:var(--yellow);font-weight:700}
-    .stp.done   .stp-l{color:rgba(255,255,255,.65)}
-    .stp-line{flex:0 0 14px;height:1px;background:rgba(255,255,255,.15)}
+    .stp-l{font-size:14px;color:rgba(255,255,255,.55);font-weight:700;line-height:1.3}
+    .stp-desc{font-size:11px;color:rgba(255,255,255,.45);font-weight:400;line-height:1.3;margin-top:1px}
+    .stp.active .stp-l{color:var(--yellow);font-weight:800}
+    .stp.active .stp-desc{color:rgba(255,214,0,.75)}
+    .stp.done   .stp-l{color:rgba(255,255,255,.8)}
+    .stp.done   .stp-desc{color:rgba(255,255,255,.55)}
+    .stp-line{flex:0 0 30px;height:2px;background:rgba(255,255,255,.15);margin-top:19px}
 
     /* 레이아웃 */
-    .main{max-width:620px;margin:0 auto;padding:14px 12px}
-    .card{background:#fff;border-radius:var(--radius-lg);border:.5px solid var(--gray-light);box-shadow:var(--shadow);overflow:hidden;margin-bottom:12px}
-    .card-body{padding:16px}
+    .main{max-width:960px;margin:0 auto;padding:22px 20px}
+    .card{background:#fff;border-radius:var(--radius-lg);border:.5px solid var(--gray-light);box-shadow:var(--shadow);overflow:hidden;margin-bottom:16px}
+    .card-body{padding:24px}
 
     /* API키 */
-    .key-wrap{background:var(--blue-pale);border-radius:var(--radius-lg);border:.5px solid rgba(26,58,143,.15);padding:14px 16px;margin-bottom:12px}
-    .key-title{font-size:13px;font-weight:800;color:var(--blue);display:flex;align-items:center;gap:6px;margin-bottom:4px}
-    .key-free{background:var(--yellow);color:var(--blue);font-size:10px;font-weight:900;padding:2px 7px;border-radius:10px}
-    .key-desc{font-size:12px;color:var(--blue);line-height:1.6;margin-bottom:8px;opacity:.8}
-    .key-link{display:inline-flex;align-items:center;gap:4px;background:var(--blue);color:var(--yellow);font-size:12px;font-weight:700;padding:5px 12px;border-radius:var(--radius);text-decoration:none;margin-bottom:10px}
+    .key-wrap{background:var(--blue-pale);border-radius:var(--radius-lg);border:.5px solid rgba(26,58,143,.15);padding:18px 20px;margin-bottom:16px}
+    .key-title{font-size:16px;font-weight:800;color:var(--blue);display:flex;align-items:center;gap:8px;margin-bottom:6px}
+    .key-free{background:var(--yellow);color:var(--blue);font-size:12px;font-weight:900;padding:3px 9px;border-radius:10px}
+    .key-desc{font-size:14px;color:var(--blue);line-height:1.6;margin-bottom:10px;opacity:.85}
+    .key-link{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:var(--yellow);font-size:14px;font-weight:700;padding:8px 16px;border-radius:var(--radius);text-decoration:none;margin-bottom:12px}
     .key-row{display:flex;gap:8px}
-    .key-inp{flex:1;padding:9px 12px;border:.5px solid rgba(26,58,143,.25);border-radius:var(--radius);font-size:13px;font-family:monospace;background:#fff}
+    .key-inp{flex:1;padding:11px 14px;border:.5px solid rgba(26,58,143,.25);border-radius:var(--radius);font-size:14px;font-family:monospace;background:#fff}
     .key-inp:focus{outline:none;border-color:var(--blue)}
-    .key-save{padding:9px 16px;background:var(--blue);color:var(--yellow);border:none;border-radius:var(--radius);font-size:13px;font-weight:800;cursor:pointer;font-family:inherit}
-    .key-saved{display:flex;align-items:center;gap:8px;font-size:13px;color:#1a6a3a;font-weight:700}
-    .key-change{font-size:12px;color:var(--blue-light);cursor:pointer;text-decoration:underline;margin-left:auto}
+    .key-save{padding:11px 20px;background:var(--blue);color:var(--yellow);border:none;border-radius:var(--radius);font-size:14px;font-weight:800;cursor:pointer;font-family:inherit}
+    .key-saved{display:flex;align-items:center;gap:10px;font-size:15px;color:#1a6a3a;font-weight:700}
+    .key-change{font-size:13px;color:var(--blue-light);cursor:pointer;text-decoration:underline;margin-left:auto}
 
     /* 업로드 */
-    .upzone{border:2.5px dashed var(--gray-border);border-radius:var(--radius-lg);padding:28px 20px;text-align:center;cursor:pointer;transition:all .2s;background:#fafaf9;position:relative}
+    .upzone{border:2.5px dashed var(--gray-border);border-radius:var(--radius-lg);padding:44px 24px;text-align:center;cursor:pointer;transition:all .2s;background:#fafaf9;position:relative}
     .upzone:hover,.upzone.drag{border-color:var(--blue);background:var(--blue-pale)}
     .upzone.has{border-color:var(--blue);background:var(--blue-pale);border-style:solid}
     .upzone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;font-size:0}
-    .upicon{font-size:34px;margin-bottom:8px}
-    .upzone h2{font-size:14px;font-weight:700;color:var(--blue);margin-bottom:4px}
-    .upzone p{font-size:12px;color:var(--text-sub);line-height:1.6}
-    .fbadge{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:var(--yellow);border-radius:20px;padding:4px 14px;font-size:12px;font-weight:700;margin-top:10px}
-    .or-line{display:flex;align-items:center;gap:9px;margin:12px 0;font-size:11px;color:var(--text-hint)}
+    .upicon{font-size:48px;margin-bottom:12px}
+    .upzone h2{font-size:19px;font-weight:800;color:var(--blue);margin-bottom:6px}
+    .upzone p{font-size:14px;color:var(--text-sub);line-height:1.6}
+    .fbadge{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:var(--yellow);border-radius:20px;padding:6px 16px;font-size:14px;font-weight:700;margin-top:12px}
+    .or-line{display:flex;align-items:center;gap:9px;margin:16px 0;font-size:13px;color:var(--text-hint)}
     .or-line::before,.or-line::after{content:'';flex:1;height:.5px;background:var(--gray-light)}
-    .extra-wrap{border:.5px solid var(--gray-light);border-radius:var(--radius);padding:11px 13px;background:#fafaf9;position:relative}
-    .extra-label{font-size:12px;color:var(--text-sub);margin-bottom:7px}
+    .extra-wrap{border:.5px solid var(--gray-light);border-radius:var(--radius);padding:14px 16px;background:#fafaf9;position:relative}
+    .extra-label{font-size:14px;color:var(--text-sub);margin-bottom:10px;font-weight:600}
     .extra-wrap>input[type=file]{position:absolute;inset:0;opacity:0;font-size:0}
     .thumbs{display:flex;flex-wrap:wrap;gap:6px}
     .thumb{width:48px;height:48px;border-radius:var(--radius);object-fit:cover;border:.5px solid var(--gray-border)}
     .add-btn{width:48px;height:48px;border-radius:var(--radius);border:1.5px dashed var(--gray-border);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--text-hint);background:#fff;cursor:pointer}
 
     /* 버튼 */
-    .btn-start{width:100%;padding:14px;background:var(--yellow);color:var(--blue);border:none;border-radius:var(--radius);font-size:16px;font-weight:900;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px;box-shadow:0 2px 8px rgba(255,214,0,.4);transition:background .15s}
+    .btn-start{width:100%;padding:20px;background:var(--yellow);color:var(--blue);border:none;border-radius:var(--radius);font-size:20px;font-weight:900;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;box-shadow:0 2px 12px rgba(255,214,0,.45);transition:background .15s}
     .btn-start:hover:not(:disabled){background:var(--yellow-dark)}
     .btn-start:disabled{background:#ddd;color:#999;cursor:not-allowed;box-shadow:none}
 
     /* 배너 */
-    .banner{border-radius:var(--radius);padding:10px 12px;font-size:12px;line-height:1.6;margin-bottom:12px;display:flex;align-items:flex-start;gap:7px;background:var(--blue-pale);color:var(--blue)}
+    .banner{border-radius:var(--radius);padding:14px 18px;font-size:15px;line-height:1.6;margin-bottom:16px;display:flex;align-items:flex-start;gap:10px;background:var(--blue-pale);color:var(--blue)}
 
     /* 로딩 */
     .loading-wrap{display:none;text-align:center;padding:3rem 1rem}
@@ -191,34 +194,6 @@
     #blog-preview .blog-space{height:16px}
     #blog-preview .blog-section{margin:12px 0}
     #blog-preview strong{font-weight:700}
-    /* 링크 배너 */
-    #blog-preview .link-banner{
-      display:block;
-      border-radius:8px;
-      padding:14px 18px;
-      margin:6px 0;
-      text-decoration:none;
-      font-size:14px;
-      font-weight:700;
-      line-height:1.5;
-    }
-    #blog-preview .link-banner-npay{
-      background:#03C75A;
-      color:#fff;
-    }
-    #blog-preview .link-banner-nmap{
-      background:#1A3A8F;
-      color:#FFD600;
-    }
-    #blog-preview .link-banner-sub{
-      font-size:11px;
-      font-weight:400;
-      opacity:.85;
-      display:block;
-      margin-top:2px;
-      word-break:break-all;
-    }
-    #blog-preview .link-banner-icon{font-size:18px;margin-right:6px}
 
     /* 복사 안내 */
     .copy-guide{background:#FFF8E1;border:.5px solid #FFD54F;border-radius:var(--radius);padding:10px 14px;font-size:12px;color:#7a5a00;margin-bottom:12px;line-height:1.6}
@@ -231,21 +206,81 @@
     .btn-reset{width:100%;padding:10px;background:#fff;color:var(--text-sub);border:.5px solid var(--gray-border);border-radius:var(--radius);font-size:12px;cursor:pointer;font-family:inherit}
 
     /* 매물 사진 업로드 전용 */
-    .photo-wrap{border:2px dashed #FFD600;border-radius:var(--radius-lg);padding:14px;background:#FFFDF0;margin-bottom:12px}
-    .photo-wrap-title{font-size:13px;font-weight:800;color:var(--blue);margin-bottom:4px;display:flex;align-items:center;gap:6px}
-    .photo-wrap-desc{font-size:11px;color:var(--text-sub);margin-bottom:10px;line-height:1.5}
-    .photo-upload-btn{display:inline-flex;align-items:center;gap:6px;background:var(--yellow);color:var(--blue);border:none;border-radius:var(--radius);padding:8px 16px;font-size:13px;font-weight:800;cursor:pointer;font-family:inherit}
+    .photo-wrap{border:2px dashed #FFD600;border-radius:var(--radius-lg);padding:20px;background:#FFFDF0;margin-bottom:16px}
+    .photo-wrap-title{font-size:16px;font-weight:800;color:var(--blue);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+    .photo-wrap-desc{font-size:13px;color:var(--text-sub);margin-bottom:12px;line-height:1.6}
+    .photo-upload-btn{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--blue);border:none;border-radius:var(--radius);padding:12px 22px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit}
     .photo-upload-btn:hover{background:var(--yellow-dark)}
     .photo-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .photo-item{position:relative;display:inline-block}
     .photo-item img{max-width:140px;max-height:120px;width:auto;height:auto;border-radius:var(--radius);border:1.5px solid #FFD600;object-fit:contain;background:#f5f5f5}
     .photo-del{position:absolute;top:-6px;right:-6px;width:20px;height:20px;background:#E53935;color:#fff;border-radius:50%;border:none;font-size:12px;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
-    .photo-count{font-size:11px;color:var(--text-sub);margin-top:6px}
+    .photo-count{font-size:13px;color:var(--text-sub);margin-top:8px}
+
+    /* PDF 생성 가이드 박스 */
+    .pdf-guide{background:#F0F7FF;border:1px solid #B3D4FC;border-radius:var(--radius-lg);padding:18px 20px;margin-bottom:16px;position:relative}
+    .pdf-guide-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;cursor:pointer;user-select:none}
+    .pdf-guide-title{font-size:15px;font-weight:800;color:var(--blue);flex:1}
+    .pdf-guide-toggle{font-size:13px;color:var(--blue);opacity:.75;font-weight:600}
+    .pdf-guide-body{display:none}
+    .pdf-guide.open .pdf-guide-body{display:block}
+    .pdf-guide.open .pdf-guide-toggle::before{content:'접기 ▲'}
+    .pdf-guide:not(.open) .pdf-guide-toggle::before{content:'자세히 보기 ▼'}
+    .pdf-steps{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+    .pdf-step{display:flex;align-items:flex-start;gap:12px;padding:10px 12px;background:#fff;border-radius:var(--radius);border:.5px solid #D0E4FF}
+    .pdf-step-num{width:28px;height:28px;border-radius:50%;background:var(--blue);color:var(--yellow);font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .pdf-step-text{font-size:14px;color:var(--text);line-height:1.5;flex:1}
+    .pdf-step-text strong{color:var(--blue);font-weight:700}
+
+    /* 업로드존 안내 텍스트 */
+    .upzone-hint{font-size:12px;color:var(--text-hint);margin-top:10px;line-height:1.5}
+    .upzone-hint a{color:var(--blue-light);text-decoration:underline;cursor:pointer;font-weight:600}
+
+    /* 툴팁 */
+    .tooltip-wrap{position:relative;display:inline-block}
+    .tooltip-content{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;padding:14px 18px;border-radius:8px;font-size:13px;line-height:1.6;width:320px;box-shadow:0 4px 14px rgba(0,0,0,.2);transition:opacity .2s, visibility .2s;text-align:left;z-index:10;font-weight:400}
+    .tooltip-content::after{content:'';position:absolute;top:100%;left:50%;margin-left:-6px;border-width:6px;border-style:solid;border-color:var(--blue) transparent transparent transparent}
+    .tooltip-wrap:hover .tooltip-content{visibility:visible;opacity:1}
+    .tooltip-content strong{color:var(--yellow);font-weight:700}
+
+    /* 작업 흐름 가이드 */
+    .workflow-guide{background:linear-gradient(135deg,#FFFBEB 0%,#FFF5D6 100%);border:2px solid #FDD966;border-radius:var(--radius-lg);padding:20px 22px;margin-bottom:18px;box-shadow:0 2px 8px rgba(253,217,102,.25)}
+    .workflow-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+    .workflow-title{font-size:17px;font-weight:900;color:var(--blue);flex:1}
+    .workflow-toggle{font-size:13px;color:var(--blue);opacity:.75;font-weight:700;cursor:pointer;user-select:none}
+    .workflow-sub{font-size:13px;color:#8a6a00;margin-bottom:14px;line-height:1.5}
+    .workflow-body{display:none}
+    .workflow-guide.open .workflow-body{display:block}
+    .workflow-guide.open .workflow-toggle::before{content:'접기 ▲'}
+    .workflow-guide:not(.open) .workflow-toggle::before{content:'펼쳐보기 ▼'}
+    .workflow-steps{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+    .wf-step{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:#fff;border-radius:var(--radius);border:.5px solid #F0D879;transition:transform .15s}
+    .wf-step:hover{transform:translateX(3px)}
+    .wf-step-num{width:32px;height:32px;border-radius:50%;background:var(--blue);color:var(--yellow);font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .wf-step-body{flex:1}
+    .wf-step-title{font-size:14px;color:var(--blue);line-height:1.5;font-weight:700;margin-bottom:2px}
+    .wf-step-desc{font-size:12px;color:var(--text-sub);line-height:1.5}
+    .wf-highlight{background:var(--yellow);color:var(--blue);padding:2px 7px;border-radius:4px;font-weight:800}
     /* 블로그 내 사진 */
     #blog-preview .blog-photo{display:block;max-width:100%;height:auto;margin:8px auto;border-radius:4px}
     #blog-preview .blog-photo-center{text-align:center;margin:12px 0}
 
-    @media(max-width:460px){.stp-l{display:none}.btn-duo{flex-direction:column}}
+    @media(max-width:600px){
+      .stp-l{font-size:12px}
+      .stp-desc{display:none}
+      .stp-n{width:34px;height:34px;font-size:15px}
+      .stp-line{flex:0 0 14px;margin-top:17px}
+      .stpbar{padding:14px 12px}
+      .hdr-title{font-size:17px}
+      .hdr-sub{font-size:12px}
+      .btn-duo{flex-direction:column}
+      .main{padding:14px 12px}
+      .card-body{padding:18px}
+      .tooltip-content{width:260px;font-size:12px}
+      .upzone{padding:32px 18px}
+      .upicon{font-size:40px}
+      .upzone h2{font-size:17px}
+    }
   </style>
 </head>
 <body>
@@ -265,13 +300,13 @@
 <!-- 스텝바 -->
 <div style="background:var(--blue)">
 <div class="stpbar">
-  <div class="stp active" id="st1"><div class="stp-n" id="sn1">1</div><div class="stp-l">PDF 업로드</div></div>
+  <div class="stp active" id="st1"><div class="stp-n" id="sn1">1</div><div class="stp-l">PDF 업로드</div><div class="stp-desc">매물 광고 PDF와<br>실제 사진을 첨부</div></div>
   <div class="stp-line"></div>
-  <div class="stp" id="st2"><div class="stp-n" id="sn2">2</div><div class="stp-l">정보 확인</div></div>
+  <div class="stp" id="st2"><div class="stp-n" id="sn2">2</div><div class="stp-l">정보 확인</div><div class="stp-desc">AI가 읽어온<br>매물 정보 확인·수정</div></div>
   <div class="stp-line"></div>
-  <div class="stp" id="st3"><div class="stp-n" id="sn3">3</div><div class="stp-l">글 생성</div></div>
+  <div class="stp" id="st3"><div class="stp-n" id="sn3">3</div><div class="stp-l">글 생성</div><div class="stp-desc">블로그 양식 그대로<br>자동으로 글 완성</div></div>
   <div class="stp-line"></div>
-  <div class="stp" id="st4"><div class="stp-n" id="sn4">4</div><div class="stp-l">완료</div></div>
+  <div class="stp" id="st4"><div class="stp-n" id="sn4">4</div><div class="stp-l">완료</div><div class="stp-desc">복사 버튼 눌러서<br>블로그에 붙여넣기</div></div>
 </div>
 </div>
 
@@ -279,6 +314,76 @@
 
   <!-- ══ 1단계: 업로드 ══ -->
   <div id="screen-upload">
+    <!-- 8단계 작업 흐름 가이드 -->
+    <div class="workflow-guide open" id="workflow-guide">
+      <div class="workflow-head" onclick="toggleWorkflow()">
+        <div style="font-size:24px">📋</div>
+        <div class="workflow-title">블로그 게시글 만드는 전체 순서 (총 8단계)</div>
+        <div class="workflow-toggle"></div>
+      </div>
+      <div class="workflow-sub">아래 순서대로 따라 하시면 누구나 쉽게 블로그 게시글을 완성할 수 있어요!</div>
+      <div class="workflow-body">
+        <div class="workflow-steps">
+          <div class="wf-step">
+            <div class="wf-step-num">1</div>
+            <div class="wf-step-body">
+              <div class="wf-step-title">PDF 업로드 → 매물 정보 확인 → 게시글 생성</div>
+              <div class="wf-step-desc">이실장에서 저장한 매물 PDF를 올리고, AI가 읽어온 매물 정보를 확인한 뒤 <span class="wf-highlight">게시글 생성</span> 버튼을 누르세요.</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">2</div>
+            <div class="wf-step-body">
+              <div class="wf-step-title">블로그 편집창 열기</div>
+              <div class="wf-step-desc">네이버 블로그에서 <span class="wf-highlight">글쓰기</span> 버튼을 눌러 새 글 작성창을 여세요.</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">3</div>
+            <div class="wf-step-body">
+              <div class="wf-step-title">상단 로고 이미지 저장 → 블로그에 사진 삽입</div>
+              <div class="wf-step-desc"><span class="wf-highlight">⬇️ 상단 로고 저장하기</span> 버튼 클릭 → 네이버 블로그의 <span class="wf-highlight">사진 아이콘</span>으로 삽입하세요.</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">4</div>
+            <div class="wf-step-body">
+              <div class="wf-step-title">타이틀 이미지 저장 → 블로그에 사진 삽입</div>
+              <div class="wf-step-desc"><span class="wf-highlight">⬇️ 타이틀 이미지 저장하기</span> 버튼 클릭 → 네이버 블로그의 <span class="wf-highlight">사진 아이콘</span>으로 삽입하세요.</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">5</div>
+            <div class="wf-step-body">
+              <div class="wf-step-title">본문 전체 복사 → 블로그 편집창에 붙여넣기</div>
+              <div class="wf-step-desc"><span class="wf-highlight">📋 본문 전체 복사</span> 버튼 클릭 → 블로그 편집창에 <span class="wf-highlight">Ctrl+V</span> (붙여넣기) 하세요.</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">6</div>
+            <div class="wf-step-body">
+              <div class="wf-step-title">하단 프로필 이미지 저장 → 블로그 맨 끝에 삽입</div>
+              <div class="wf-step-desc"><span class="wf-highlight">⬇️ 하단 프로필 저장하기</span> 버튼 클릭 → 블로그 글 <span class="wf-highlight">맨 마지막</span>에 사진으로 삽입하세요.</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">7</div>
+            <div class="wf-step-body">
+              <div class="wf-step-title">해시태그 복사 → 블로그 태그 입력란에 붙여넣기</div>
+              <div class="wf-step-desc"><span class="wf-highlight">🔖 해시태그 복사하기</span> 버튼 클릭 → 블로그 <span class="wf-highlight">태그 입력란</span>에 Ctrl+V 하세요.</div>
+            </div>
+          </div>
+          <div class="wf-step">
+            <div class="wf-step-num">8</div>
+            <div class="wf-step-body">
+              <div class="wf-step-title">발행! 🎉</div>
+              <div class="wf-step-desc">모든 내용이 잘 들어갔는지 확인하고 <span class="wf-highlight">발행</span> 버튼을 눌러 게시글을 공개하세요.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="key-wrap" id="key-wrap">
       <div class="key-title">🔑 Google AI Studio API 키 <span class="key-free">무료</span></div>
       <div class="key-desc">처음 한 번만 입력하면 자동 저장돼요.<br>아래 버튼으로 구글 계정 무료 키 발급</div>
@@ -309,12 +414,60 @@
 
     <div class="card">
       <div class="card-body">
-        <div class="upzone" id="dropzone">
+        <!-- PDF 생성 방법 가이드 -->
+        <div class="pdf-guide" id="pdf-guide" onclick="togglePdfGuide()">
+          <div class="pdf-guide-head">
+            <div style="font-size:22px">📖</div>
+            <div class="pdf-guide-title">이실장 매물 PDF 만드는 방법</div>
+            <div class="pdf-guide-toggle"></div>
+          </div>
+          <div class="pdf-guide-body" onclick="event.stopPropagation()">
+            <div class="pdf-steps">
+              <div class="pdf-step">
+                <div class="pdf-step-num">1</div>
+                <div class="pdf-step-text"><strong>이실장 웹사이트</strong>에 접속해서 로그인하세요.</div>
+              </div>
+              <div class="pdf-step">
+                <div class="pdf-step-num">2</div>
+                <div class="pdf-step-text">상단 메뉴의 <strong>매물관리 → 매물광고</strong>를 클릭하세요.</div>
+              </div>
+              <div class="pdf-step">
+                <div class="pdf-step-num">3</div>
+                <div class="pdf-step-text">등록할 매물의 광고글을 열어, 하얀색 바탕 위에서 <strong>마우스 우클릭</strong>하세요.</div>
+              </div>
+              <div class="pdf-step">
+                <div class="pdf-step-num">4</div>
+                <div class="pdf-step-text">우클릭 메뉴에서 <strong>"인쇄"</strong>를 클릭하세요.</div>
+              </div>
+              <div class="pdf-step">
+                <div class="pdf-step-num">5</div>
+                <div class="pdf-step-text">인쇄 창의 대상을 <strong>"PDF로 저장"</strong>으로 선택하세요.</div>
+              </div>
+              <div class="pdf-step">
+                <div class="pdf-step-num">6</div>
+                <div class="pdf-step-text"><strong>"저장"</strong> 버튼을 눌러 컴퓨터에 PDF 파일로 저장하세요.</div>
+              </div>
+              <div class="pdf-step">
+                <div class="pdf-step-num">7</div>
+                <div class="pdf-step-text">저장된 PDF 파일을 <strong>아래 업로드 칸에 드래그</strong>하거나, 클릭해서 올려주세요!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="upzone tooltip-wrap" id="dropzone">
           <input type="file" id="pdf-inp" accept=".pdf,image/png,image/jpeg,image/jpg,image/webp" onchange="handleMain(this)">
           <div class="upicon" id="upicon">📄</div>
           <h2 id="uptitle">PDF 또는 이미지를 올려주세요</h2>
-          <p id="updesc">터치하거나 끌어다 놓으세요 · PDF · PNG · JPG</p>
+          <p id="updesc">이실장에서 저장한 매물 광고 PDF 파일을 올리세요<br>(터치하거나 끌어다 놓으세요 · PDF · PNG · JPG)</p>
           <div id="fbadge" style="display:none" class="fbadge">✓ <span id="fname"></span></div>
+          <div class="tooltip-content">
+            <strong>어떤 PDF를 올려야 하나요?</strong><br><br>
+            이실장 웹사이트 → <strong>매물관리 → 매물광고</strong>에서 해당 매물 광고글을 열고,<br>
+            하얀 바탕 우클릭 → <strong>인쇄</strong> → <strong>"PDF로 저장"</strong> → 파일 저장<br><br>
+            위 파일을 이 칸에 올려주세요!<br>
+            위쪽 <strong>"📖 이실장 매물 PDF 만드는 방법"</strong> 박스에서 자세한 순서를 확인할 수 있어요.
+          </div>
         </div>
         <div class="or-line">추가 이미지 첨부 (선택)</div>
         <div class="extra-wrap">
@@ -381,32 +534,67 @@
         <div class="res-hint">전체 드래그 → Ctrl+C → 블로그 붙여넣기</div>
       </div>
 
-      <!-- 타이틀 이미지 -->
+      <!-- 📷 이미지 저장 섹션 -->
+      <div style="padding:14px 16px;background:#FFFDF0;border-bottom:.5px solid var(--gray-light)">
+        <div style="font-size:15px;font-weight:800;color:var(--blue);margin-bottom:6px">📷 블로그에 삽입할 이미지 3개</div>
+        <div style="font-size:12px;color:var(--text-sub);line-height:1.6;margin-bottom:12px">
+          아래 3개 이미지를 각각 저장한 뒤 블로그 게시글 작성창에서 <strong>사진 첨부 아이콘</strong>으로 직접 삽입해 주세요.
+        </div>
+      </div>
+
+      <!-- 1. 상단 로고 이미지 -->
       <div class="img-wrap">
-        <div class="img-label">📌 타이틀 이미지 (게시글 맨 위 삽입용)</div>
+        <div class="img-label">1️⃣ 상단 로고 이미지 (게시글 맨 처음에 삽입)</div>
+        <img id="greeting-img" style="width:100%;border-radius:var(--radius);display:block" alt="상단 로고">
+        <button class="btn-dl" onclick="downloadGreetingImg()">⬇️ 상단 로고 저장하기</button>
+      </div>
+
+      <!-- 2. 타이틀 이미지 -->
+      <div class="img-wrap">
+        <div class="img-label">2️⃣ 타이틀 이미지 (인사말 다음에 삽입)</div>
         <canvas id="title-canvas"></canvas>
         <button class="btn-dl" onclick="downloadImg()">⬇️ 타이틀 이미지 저장하기</button>
+      </div>
+
+      <!-- 3. 하단 프로필 이미지 -->
+      <div class="img-wrap">
+        <div class="img-label">3️⃣ 하단 프로필 이미지 (게시글 맨 마지막 "포스팅 일시" 다음에 삽입)</div>
+        <img id="prof1-img" style="width:100%;border-radius:var(--radius);display:block" alt="하단 프로필">
+        <button class="btn-dl" onclick="downloadProf1Img()">⬇️ 하단 프로필 저장하기</button>
       </div>
 
       <!-- 복사 안내 -->
       <div style="padding:0 14px">
         <div class="copy-guide" style="margin-top:12px">
-          💡 <strong>복사 방법:</strong> 아래 게시글 내용을 <strong>마우스로 전체 드래그</strong> 후 <strong>Ctrl+C</strong> → 네이버 블로그 편집창에 <strong>Ctrl+V</strong> 하면 표 포함 그대로 삽입돼요!<br>
-          또는 아래 <strong>"전체 복사" 버튼</strong>을 누르세요.
+          💡 <strong>복사 방법:</strong> 아래 <strong>"📋 전체 복사" 버튼</strong>을 누르시면 게시글 본문이 클립보드에 복사돼요.<br>
+          네이버 블로그 편집창에 <strong>Ctrl+V</strong> 하세요! (태그는 따로 복사)
         </div>
       </div>
 
       <!-- 블로그 미리보기 (실제 HTML 렌더링) -->
       <div class="preview-wrap">
         <div class="preview-label">
-          📝 블로그 게시글 미리보기 (표 포함)
+          📝 블로그 게시글 본문 미리보기
           <span>↕ 스크롤 가능</span>
         </div>
         <div id="blog-preview"></div>
       </div>
 
+      <div class="res-actions" style="border-bottom:.5px solid var(--gray-light)">
+        <button class="btn-copy-all" id="btn-copy" onclick="copyAll()">📋 본문 전체 복사 → 블로그에 붙여넣기</button>
+      </div>
+
+      <!-- 🔖 해시태그 섹션 -->
+      <div style="padding:16px;background:#F5F9FF;border-bottom:.5px solid var(--gray-light)">
+        <div style="font-size:15px;font-weight:800;color:var(--blue);margin-bottom:8px">🔖 해시태그 (따로 복사)</div>
+        <div style="font-size:12px;color:var(--text-sub);line-height:1.6;margin-bottom:10px">
+          본문 복사와 별도로 아래 해시태그를 복사해서 블로그 게시글의 <strong>맨 아래 태그 입력란</strong>에 붙여넣어 주세요.
+        </div>
+        <div id="hashtag-content" style="background:#fff;border:.5px solid var(--gray-light);border-radius:var(--radius);padding:12px 14px;font-size:13px;color:#555;line-height:1.8;word-break:break-all;margin-bottom:10px"></div>
+        <button class="btn-copy-all" id="btn-copy-tags" onclick="copyHashtags()" style="margin:0">🔖 해시태그 복사하기</button>
+      </div>
+
       <div class="res-actions">
-        <button class="btn-copy-all" id="btn-copy" onclick="copyAll()">📋 전체 복사 → 블로그에 붙여넣기</button>
         <a class="btn-blog" href="https://blog.naver.com/papayajiny" target="_blank">🔗 블로그 바로가기 (blog.naver.com/papayajiny)</a>
         <button class="btn-reset" onclick="reset()">↩ 새 매물 게시글 만들기</button>
       </div>
@@ -437,6 +625,16 @@ const FIELDS=[
    초기화
 ══════════════════════════════════════════ */
 window.onload=()=>{ refreshKey(); setupDrop(); };
+
+/* PDF 가이드 박스 펼치기/접기 */
+function togglePdfGuide(){
+  document.getElementById('pdf-guide').classList.toggle('open');
+}
+
+/* 작업 흐름 가이드 박스 펼치기/접기 */
+function toggleWorkflow(){
+  document.getElementById('workflow-guide').classList.toggle('open');
+}
 
 function refreshKey(){
   document.getElementById('key-wrap').style.display  = apiKey?'none':'block';
@@ -535,9 +733,10 @@ function setStep(n){
   }
 }
 
-/* 현재 시각 */
+/* 현재 시각 + 3분 (업로드/편집/게시 시간 고려) */
 function nowStr(){
   const d=new Date();
+  d.setMinutes(d.getMinutes()+3); /* +3분 오프셋 */
   const p=v=>String(v).padStart(2,'0');
   return `${d.getFullYear()}년\n${p(d.getMonth()+1)}월 ${p(d.getDate())}일 ${p(d.getHours())}시 ${p(d.getMinutes())}분`;
 }
@@ -894,9 +1093,8 @@ function buildBlogHTML(d, comment, photos){
   ${rows}
 </table>`;
 
-  /* ── 전체 HTML 조립 ── */
-  return `<div class="blog-photo-center" style="text-align:center;margin:0 0 12px 0;"><img src="${GREETING_IMG}" alt="나성일진부동산" style="max-width:100%;height:auto;border-radius:4px;"></div>
-<div class="blog-p">안녕하세요! 세종시 나성일진부동산입니다</div>
+  /* ── 전체 HTML 조립 (본문) ── */
+  const body = `<div class="blog-p">안녕하세요! 세종시 나성일진부동산입니다</div>
 <div class="blog-p">오늘도 매물 소개해 드릴게요~!</div>
 <div class="blog-space"></div>
 <div class="blog-space"></div>
@@ -918,14 +1116,9 @@ ${commentHTML}
 <div class="blog-p">${d.소재지||'세종시 세종시 나성동'} ${d.단지명||''} ${d.거래유형||''} 외에도</div>
 <div class="blog-p">아래 배너를 통해 저희 부동산의 다양한 매물을 보실 수 있습니다.</div>
 <div class="blog-space"></div>
-<a class="link-banner link-banner-npay" href="https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeCAKwA4ArPwCc-AOxgAvhQaoEAYwAWABRr0msEFKkBdIA&center=127.25740293911485-36.48781399999896&zoom=15" target="_blank">
-  <span class="link-banner-icon">🏠</span>나성동 아파트 매매 매물다양
-  <span class="link-banner-sub">네이버페이 부동산 → 클릭하면 바로 연결됩니다 | https://fin.land.naver.com/...</span>
-</a>
-<a class="link-banner link-banner-nmap" href="https://naver.me/5UVZUHWJ" target="_blank">
-  <span class="link-banner-icon">🗺</span>나성일진공인중개사사무소 네이버 지도
-  <span class="link-banner-sub">네이버 지도 바로가기 → 클릭하면 바로 연결됩니다 | https://naver.me/5UVZUHWJ</span>
-</a>
+<a href="https://fin.land.naver.com/map?layer=NobwRAlgJmBcYCcCmBDANgFwPYIPpSQxQjTABowAHFBFAWwGc5xl1sEBJGeCAKwA4ArPwCc-AOxgAvhQaoEAYwAWABRr0msEFKkBdIA&center=127.25740293911485-36.48781399999896&zoom=15" target="_blank" style="display:block;background-color:#03C75A;color:#ffffff;border-radius:8px;padding:18px 22px;margin:8px 0;text-decoration:none;font-size:16px;font-weight:700;line-height:1.6;"><span style="color:#ffffff;font-size:16px;font-weight:700;">🏠 나성동 아파트 매매 매물다양</span><br><span style="color:#ffffff;font-size:13px;font-weight:400;opacity:0.9;">네이버페이 부동산 → 클릭하면 바로 연결됩니다</span></a>
+<div class="blog-space"></div>
+<a href="https://naver.me/5UVZUHWJ" target="_blank" style="display:block;background-color:#055ADE;color:#FDD966;border-radius:8px;padding:18px 22px;margin:8px 0;text-decoration:none;font-size:16px;font-weight:700;line-height:1.6;"><span style="color:#FDD966;font-size:16px;font-weight:700;">🗺 나성일진공인중개사사무소 네이버 지도</span><br><span style="color:#FDD966;font-size:13px;font-weight:400;opacity:0.9;">네이버 지도 바로가기 → 클릭하면 바로 연결됩니다</span></a>
 <div class="blog-space"></div>
 <div class="blog-p">나성일진공인중개사사무소는 매물 정보를 정확하게 전달하기 위해</div>
 <div class="blog-p">현장 확인을 원칙으로 하고 있습니다.</div>
@@ -952,11 +1145,9 @@ ${tblDetail}
 <div class="blog-p" style="font-size:12px;color:#666">포스팅 당시 진성매물임을 확인 하였으나</div>
 <div class="blog-p" style="font-size:12px;color:#666">포스팅 내용을 보는 시점에 거래가 완료되었을 수 있으니</div>
 <div class="blog-p" style="font-size:12px;color:#666">유선상 해당 매물이 아직 있는지 여부를 확인해 주세요</div>
-<div class="blog-p" style="font-size:12px;color:#666">포스팅 일시 : ${posting.replace('\n',' ')}</div>
-<div class="blog-space"></div>
-<div class="blog-photo-center" style="text-align:center;margin:12px 0;"><img class="blog-photo" src="${PROF1_IMG}" alt="나성일진부동산 프로필" style="max-width:100%;height:auto;border-radius:4px;"></div>
-<div class="blog-space"></div>
-<div class="blog-p" style="font-size:13px;color:#555">태그${hashtags}</div>`;
+<div class="blog-p" style="font-size:12px;color:#666">포스팅 일시 : ${posting.replace('\n',' ')}</div>`;
+
+  return { body: body, hashtags: '태그'+hashtags };
 }
 
 /* ══════════════════════════════════════════
@@ -982,9 +1173,14 @@ async function generate(){
     }catch(e){ finalComment=''; }
   }
 
-  /* 블로그 HTML 생성 (사진 포함) */
-  const blogHTML=buildBlogHTML(d, finalComment, photoURLs);
-  document.getElementById('blog-preview').innerHTML=blogHTML;
+  /* 블로그 HTML 생성 (본문 + 해시태그 분리) */
+  const result = buildBlogHTML(d, finalComment, photoURLs);
+  document.getElementById('blog-preview').innerHTML = result.body;
+  document.getElementById('hashtag-content').textContent = result.hashtags;
+
+  /* 상단 로고 / 하단 프로필 이미지 프리뷰에 세팅 */
+  document.getElementById('greeting-img').src = GREETING_IMG;
+  document.getElementById('prof1-img').src = PROF1_IMG;
 
   /* 타이틀 이미지 */
   drawTitle(d);
@@ -1001,22 +1197,11 @@ async function generate(){
 async function copyAll(){
   const el=document.getElementById('blog-preview');
 
-  /* 복사 전: link-banner 요소에 인라인 스타일 강제 적용
-     (네이버 블로그가 class 기반 스타일은 제거하므로 인라인으로 박아야 살아남음) */
+  /* 복사 전: 표 요소에 인라인 스타일 강제 적용
+     (네이버 블로그가 class 기반 스타일을 제거하므로 인라인으로 박아야 살아남음)
+     링크 배너는 이미 HTML에 인라인 스타일이 박혀있음 */
   const cloned=el.cloneNode(true);
-  cloned.querySelectorAll('.link-banner-npay').forEach(a=>{
-    a.style.cssText='display:block;background:#03C75A;color:#fff;border-radius:8px;padding:14px 18px;margin:6px 0;text-decoration:none;font-size:14px;font-weight:700;line-height:1.5;';
-  });
-  cloned.querySelectorAll('.link-banner-nmap').forEach(a=>{
-    a.style.cssText='display:block;background:#055ADE;color:#FDD966;border-radius:8px;padding:14px 18px;margin:6px 0;text-decoration:none;font-size:14px;font-weight:700;line-height:1.5;';
-  });
-  cloned.querySelectorAll('.link-banner-sub').forEach(span=>{
-    span.style.cssText='font-size:11px;font-weight:400;opacity:.85;display:block;margin-top:2px;word-break:break-all;';
-  });
-  cloned.querySelectorAll('.link-banner-icon').forEach(span=>{
-    span.style.cssText='font-size:18px;margin-right:6px;';
-  });
-  /* 표 인라인 스타일도 강제 적용 */
+  /* 표 인라인 스타일 강제 적용 */
   cloned.querySelectorAll('.blog-tbl').forEach(t=>{
     t.style.cssText='width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:13px;';
   });
@@ -1042,7 +1227,7 @@ async function copyAll(){
     await navigator.clipboard.write([new ClipboardItem({'text/html':htmlBlob,'text/plain':textBlob})]);
     const btn=document.getElementById('btn-copy');
     btn.textContent='✅ 복사 완료! 블로그에 붙여넣기 하세요';
-    setTimeout(()=>btn.textContent='📋 전체 복사 → 블로그에 붙여넣기',3000);
+    setTimeout(()=>btn.textContent='📋 본문 전체 복사 → 블로그에 붙여넣기',3000);
   }catch(e){
     /* fallback: 선택 후 복사 */
     const sel=window.getSelection(), range=document.createRange();
@@ -1051,7 +1236,20 @@ async function copyAll(){
     sel.removeAllRanges();
     const btn=document.getElementById('btn-copy');
     btn.textContent='✅ 복사 완료!';
-    setTimeout(()=>btn.textContent='📋 전체 복사 → 블로그에 붙여넣기',2500);
+    setTimeout(()=>btn.textContent='📋 본문 전체 복사 → 블로그에 붙여넣기',2500);
+  }
+}
+
+/* 해시태그 복사 */
+async function copyHashtags(){
+  const text=document.getElementById('hashtag-content').textContent;
+  try{
+    await navigator.clipboard.writeText(text);
+    const btn=document.getElementById('btn-copy-tags');
+    btn.textContent='✅ 해시태그 복사 완료!';
+    setTimeout(()=>btn.textContent='🔖 해시태그 복사하기',2500);
+  }catch(e){
+    alert('복사에 실패했어요. 직접 드래그해서 복사해주세요.');
   }
 }
 
@@ -1063,6 +1261,20 @@ function downloadImg(){
   const a=document.createElement('a');
   a.download=(parsed.단지명||'매물')+'_타이틀.png';
   a.href=cv.toDataURL('image/png'); a.click();
+}
+
+/* base64 이미지(상단 로고) 다운로드 */
+function downloadGreetingImg(){
+  const a=document.createElement('a');
+  a.download='나성일진부동산_상단로고.jpg';
+  a.href=GREETING_IMG; a.click();
+}
+
+/* base64 이미지(하단 프로필) 다운로드 */
+function downloadProf1Img(){
+  const a=document.createElement('a');
+  a.download='나성일진부동산_하단프로필.jpg';
+  a.href=PROF1_IMG; a.click();
 }
 
 /* ══════════════════════════════════════════
@@ -1080,7 +1292,7 @@ function reset(){
   document.getElementById('dropzone').className='upzone';
   document.getElementById('upicon').textContent='📄';
   document.getElementById('uptitle').textContent='PDF 또는 이미지를 올려주세요';
-  document.getElementById('updesc').textContent='터치하거나 끌어다 놓으세요 · PDF · PNG · JPG';
+  document.getElementById('updesc').innerHTML='이실장에서 저장한 매물 광고 PDF 파일을 올리세요<br>(터치하거나 끌어다 놓으세요 · PDF · PNG · JPG)';
   document.getElementById('fbadge').style.display='none';
   document.getElementById('thumbs').innerHTML='<div class="add-btn" onclick="document.getElementById(\'extra-inp\').click();event.stopPropagation()">+</div>';
   document.getElementById('btn-start').disabled=true;
